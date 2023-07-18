@@ -1,25 +1,25 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import HomePage from './page/homePage';
+import CreateBranchOfficeForm from './page/CreateBranchOfficeForm';
+import EditBranchOfficeForm from './page/EditBranchOfficeForm';
+import DeleteBranchOfficeDialog from './page/DeleteBranchOfficeDialog';
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/branch-offices/create" element={<CreateBranchOfficeForm />} />
+        <Route path="/branch-offices/:code/edit" element={<EditBranchOfficeForm />} />
+        <Route
+          path="/branch-offices/:code/delete"
+          element={<DeleteBranchOfficeDialog open={true} onClose={() => {}} />}
+        />
+      </Routes>
+    </Router>
   );
 }
 

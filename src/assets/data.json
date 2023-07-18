@@ -1,0 +1,18 @@
+{
+  "branchOffices": [
+    {
+      "code": "1001",
+      "description": "Bits Colombia",
+      "address": "Cl 45 # 26-12",
+      "identification": "9095642112",
+      "currency": "COP"
+    },
+    {
+      "code": "1002",
+      "description": "Bits Mexico",
+      "address": "Cl 45 # 26-12",
+      "identification": "9095642112",
+      "currency": "COP"
+    }
+  ]
+}
